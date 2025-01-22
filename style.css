@@ -51,7 +51,7 @@ body{
     position: absolute;
     background-color: white;
     width:100px;
-    border: solid black 3px;
+    border: solid black 2px;
     padding:15px;
     right:5px;
     display:none;
@@ -66,11 +66,20 @@ body{
     border-bottom: solid black 1px;
 
 }
+.categories p:hover{
+    transition-duration: 2s;
+    background-color: azure;
+    color:#A435F0;
+    border: solid blanchedalmond 2px;
+    border-radius: 5px;
+    cursor:grabbing;
+}
 .categories p{
     padding:10px;
     background-color: #A435F0;
     color: white;
     border-radius: 20px;
+    border: solid blanchedalmond 2px;
 }
 .sale__img{
     position: relative;
@@ -81,12 +90,32 @@ body{
 }
 .sales__one{
    background-color: aliceblue;
-    border: solid black 6px;
-    padding: 10px;
+    border: solid black 3px;
+    border-radius: 50px;
+    padding: 30px;
     width: 300px;
     position: absolute;
     top:20%;
     left:10%;
+    animation-name: rotate;
+    opacity:0;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes rotate{
+    0%{
+        transform:scale(10px);
+        opacity:0;
+    }
+    50%{
+        transform: rotate(360deg);
+        opacity:1;
+    }
+    100%{
+        transform: translate3d(10px);
+        opacity:1;
+    }
+   
 }
 .recommended{
     padding:10px;
@@ -128,6 +157,7 @@ body{
    gap: 10px;
    margin-top: 10px;
    flex-wrap: wrap;
+   cursor:pointer;
 
 }
 .topics__container p{
